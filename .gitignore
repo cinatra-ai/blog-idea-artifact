@@ -1,0 +1,26 @@
+# Dependencies
+node_modules/
+
+# Source mirror ships no committed lockfile (see ci.yml — install is monorepo-owned)
+pnpm-lock.yaml
+
+# Build output (tsconfig outDir)
+dist/
+
+# Test coverage
+coverage/
+
+# npm pack output
+*.tgz
+
+# Secrets — never commit
+.env
+.env.*
+
+# Logs
+*.log
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
