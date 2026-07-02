@@ -42,6 +42,7 @@
         ]
       },
       "matcherConfidenceThreshold": 0.7
-    }
+    },
+    "consumes": []
   }
 }
