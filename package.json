@@ -20,6 +20,7 @@
   "cinatra": {
     "apiVersion": "cinatra.ai/v1",
     "kind": "artifact",
+    "displayName": "Blog Idea",
     "roles": [
       "artifact-blog-idea-summary"
     ],
