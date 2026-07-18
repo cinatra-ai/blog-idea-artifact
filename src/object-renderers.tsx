@@ -6,7 +6,7 @@
 // (listRow / card / detail), relocated OUT of the cinatra core
 // (`src/lib/blog/integration/renderers.tsx`, where they were named
 // `BlogPostIdea*`) into this owning extension per cinatra#1631 AC2
-// (epic #1620 S7/M2) under the owner ruling of eng#548 entry 73 ("remove from
+// (epic #1620 S7/M2) entry 73 ("remove from
 // core, move to the respective extensions, do not add in prod"). Core keeps the
 // TYPE registration with EMPTY renderer slots.
 //
