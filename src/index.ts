@@ -18,8 +18,27 @@ export const blogIdeaArtifactManifest: SemanticArtifactManifest = {
     },
   },
   skills: {
-    authoring: ["@cinatra-ai/blog-idea-artifact:blog-idea-author"],
-    matchers: ["@cinatra-ai/blog-idea-artifact:blog-idea-matcher"],
+    authoring: ["@cinatra-ai/blog-idea-authoring-skill:blog-idea-authoring"],
+    matchers: ["@cinatra-ai/blog-idea-matcher-skill:blog-idea-matcher"],
   },
   matcherConfidenceThreshold: 0.7,
+  objectTypes: [
+    {
+      type: "@cinatra-ai/blog-idea-artifact:blog-idea",
+      claim: "dedicated",
+      dispositions: {
+        projection: "artifact-safe",
+        sensitivity: "normal",
+      },
+      schema: {
+        type: "object",
+        properties: {
+          title: {
+            type: "string",
+          },
+        },
+        additionalProperties: true,
+      },
+    },
+  ],
 };
