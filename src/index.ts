@@ -42,33 +42,10 @@ export const blogIdeaArtifactManifest: SemanticArtifactManifest = {
     },
   ],
 
-  // THE DISPLAYS THIS EXTENSION SHIPS, declared for its OWN type and published
-  // through this package's own `exports` at the key the host's manifest
-  // generator derives from each entry. Mirrors the `cinatra` block in
-  // package.json, which is the manifest of record; the manifest test keeps the
-  // two in agreement.
-  ui: {
-    "abiVersion": 1,
-    "sdkAbiRange": "^2.5.0",
-    "renderers": {
-      "detail": {
-        "entry": "./src/renderers/detail.tsx",
-        "propsApiVersion": 1,
-        "representations": [
-          "text/markdown",
-          "text/plain"
-        ]
-      },
-      "preview": {
-        "entry": "./src/renderers/preview.tsx",
-        "propsApiVersion": 1,
-        "representations": [
-          "text/markdown",
-          "text/plain"
-        ]
-      }
-    }
-  },
+  // NO DISPLAY OF ITS OWN: this extension registers no renderer for any slot.
+  // A blog idea is drawn by the display of its content type -- markdown by the
+  // Markdown extension's display, plain text by the Text extension's. The
+  // modules under src/renderers stay in the tree, unregistered and unexported.
 };
 
 export {
