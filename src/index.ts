@@ -28,6 +28,7 @@ export const blogIdeaArtifactManifest: SemanticArtifactManifest = {
       claim: "dedicated",
       dispositions: {
         projection: "artifact-safe",
+        pinnable: true,
         sensitivity: "normal",
       },
       schema: {
